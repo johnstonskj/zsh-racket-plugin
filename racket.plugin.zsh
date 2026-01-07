@@ -5,7 +5,7 @@
 #
 # Description:
 #
-#   Add one-line description here...
+#   Plugin to configure environment variables for Racket programming language.
 #
 # Public variables:
 #
