@@ -1,11 +1,7 @@
 # -*- mode: sh; eval: (sh-set-shell "zsh") -*-
 #
 # Plugin Name: racket
-# Repository: https://github.com/johnstonskj/zsh-racket-plugin
-#
-# Description:
-#
-#   Plugin to configure environment variables for Racket programming language.
+# Description: Plugin to configure environment variables for Racket programming language.
 #
 # Public variables:
 #
