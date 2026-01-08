@@ -32,9 +32,6 @@ RACKET[_PLUGIN_DIR]="${0:h}"
 RACKET[_ALIASES]=""
 RACKET[_FUNCTIONS]=""
 
-# Save current state for any global environment variables that may be modified
-# by the plugin here.
-
 ############################################################################
 # Internal Support Functions
 ############################################################################
@@ -114,13 +111,14 @@ racket_plugin_unload() {
     for alias in ${aliases[@]}; do
         unalias "${alias}"
     done
-    
-    # Remove the global data variable.
-    unset RACKET
 
+    # Reset global environment variables.
     unset RACKET_VERSION
     unset RACKET_HOME
     unset RACKET_USER
+    
+    # Remove the global data variable.
+    unset RACKET
 
     # Remove this function.
     unfunction racket_plugin_unload
