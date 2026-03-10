@@ -1,7 +1,9 @@
 # -*- mode: sh; eval: (sh-set-shell "zsh") -*-
 #
-# Plugin Name: racket
-# Description: Plugin to configure environment variables for Racket programming language.
+# @name: racket
+# @brief: Set environment variables for the Racket programming language.
+# @version: 0.1.1
+# @license: MIT AND Apache-2.0
 #
 # Public variables:
 #
