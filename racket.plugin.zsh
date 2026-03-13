@@ -22,14 +22,14 @@ racket_plugin_init() {
 
     if [[ $OSTYPE = [Dd]arwin* ]] ; then
         @zplugins_envvar_save racket RACKET_VERSION
-        export RACKET_VERSION=$(ls -d /Applications/Racket* |cut -d "v" -f 2 |sort -n |tail -1)
+        typeset -g RACKET_VERSION=$(ls -d /Applications/Racket* |cut -d "v" -f 2 |sort -n |tail -1)
 
         @zplugins_envvar_save racket RACKET_HOME
-        export RACKET_HOME="/Applications/Racket\ v${RACKET_VERSION}"
+        typeset -g RACKET_HOME="/Applications/Racket\ v${RACKET_VERSION}"
         @zplugins_add_to_path racket "${RACKET_HOME}/bin"
         
         @zplugins_envvar_save racket RACKET_USER
-        export RACKET_USER="${HOME}/Library/Racket/${RACKET_VERSION}"        
+        typeset -g RACKET_USER="${HOME}/Library/Racket/${RACKET_VERSION}"        
         @zplugins_add_to_path racket "${RACKET_USER}/bin"
     fi
 }
